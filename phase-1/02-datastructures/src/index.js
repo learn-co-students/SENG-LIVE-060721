@@ -117,7 +117,7 @@ function updateCakeOrders(array, action){
     console.log(action)
     // for of
     for(let cake of array){
-         debugger
+        // debugger
             //How can we debug the loop by stopping the code in place?
         action(cake)
     }
