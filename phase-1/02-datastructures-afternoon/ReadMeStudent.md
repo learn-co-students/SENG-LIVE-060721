@@ -6,7 +6,7 @@
     - Objects 
 
 - Access and iterate through different Data Structure
-    - Arrays
+    - Arrays 
         - Index in array
         - Access single element in array and objects
         - for…of

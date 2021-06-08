@@ -32,3 +32,12 @@ const orders = [
         ingredients: ["earl grey", "buttermilk", " vanilla extract", "eggs", "sugar", "butter", "baking soda", "baking powder", "flour"]
     }
 ]
+
+// console.log(orders[2].ingredients)
+// console.log(orders[2].ingredients[2])
+// console.log(orders[3].price)
+// orders[1].flavor.toUpperCase()
+// orders[0].complete = true
+// for (cakeOrder of orders) {
+//  console.log(cakeOrder.flavor)
+// }
