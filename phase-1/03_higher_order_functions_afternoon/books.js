@@ -42,6 +42,3 @@ const bookStore = {
 
 
 
-console.log(bookStore.inventory.find(books => books.title === 'JavaScript: The Definitive Guide').title)
-
-console.log(bookStore.inventory.filter(books => books.inventory < 3).map(book => book.title))
