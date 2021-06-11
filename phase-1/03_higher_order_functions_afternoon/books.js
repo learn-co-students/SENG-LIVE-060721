@@ -42,3 +42,6 @@ const bookStore = {
 
 
 
+// bookStore.inventory.forEach(books => console.log(books.reviews))
+
+// console.log(bookStore.inventory.map(book=>book.price))
