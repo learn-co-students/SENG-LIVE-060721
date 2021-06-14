@@ -1,0 +1,47 @@
+{
+  "food": [],
+  "animals": [
+    {
+      "id": 1,
+      "name": "Pangolin",
+      "imageUrl": "https://i.pinimg.com/originals/bf/ff/93/bfff9395c6ae0d24534f030580924c7e.jpg",
+      "description": "The Pangolin, otherwise known as the scaly anteater, is the only mammal in the world to be covered from head to toe in keratin scales (the same as human finger nails).",
+      "donations": 0
+    },
+    {
+      "id": 3,
+      "name": "Gibbon",
+      "imageUrl": "https://external-preview.redd.it/hqv76hMTwDpeM4o4jp55PIUuBCwTq5T66zy_0MJiVv8.jpg?auto=webp&s=36c0ae0727537b4a01c42cc32d37770f5b25e3e9",
+      "description": "Gibbons communicate by singing! Gibbon vocalizations are often referred to as song because of the way they modulate their pitch. Gibbons sing alone and in duets and they start each day by singing at sunrise.",
+      "donations": 0
+    },
+    {
+      "id": 4,
+      "name": "Wombat",
+      "imageUrl": "https://live.staticflickr.com/4158/33752020123_eab52e719d_b.jpg",
+      "description": "They have cube-shaped poop. Wombat poop is square. They mark their territories by defecating, and it's thought that the shape of their poop keeps it from rolling away.",
+      "donations": 0
+    },
+    {
+      "name": "Sloth",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Choloepus_hoffmanni_%28Puerto_Viejo%2C_CR%29_crop.jpg/220px-Choloepus_hoffmanni_%28Puerto_Viejo%2C_CR%29_crop.jpg",
+      "description": "Sloths are so named because of their very low metabolism and deliberate movements.",
+      "donations": 0,
+      "id": 5
+    },
+    {
+      "name": "Octopus",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Octopus2.jpg/220px-Octopus2.jpg",
+      "description": "Octopuses inhabit various regions of the ocean, including coral reefs, pelagic waters, and the seabed; some live in the intertidal zone and others at abyssal depths.",
+      "donations": 0,
+      "id": 7
+    },
+    {
+      "name": "Octopus",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Octopus2.jpg/220px-Octopus2.jpg",
+      "description": "Octopuses inhabit various regions of the ocean, including coral reefs, pelagic waters, and the seabed; some live in the intertidal zone and others at abyssal depths.",
+      "donations": 0,
+      "id": 8
+    }
+  ]
+}
