@@ -12,6 +12,7 @@ function renderOneAnimal(animalObj) {
     const btnDelete = document.createElement("button")
 
     card.className = "card"
+    card.id = animalObj.id
   
     card.innerHTML = `
     <img src="${animalObj.imageUrl}" alt="${animalObj.name}">
