@@ -38,6 +38,8 @@ function renderList(){
 
 
 
+
+
 //Render 
 function buildOneBook(book){
     let li = document.createElement('li')
@@ -63,6 +65,11 @@ function buildOneBook(book){
     btn.textContent = 'Delete'
     btnInventory.textContent = 'Add Inventory'
 
+    btnInventory.addEventListener('click', () => {
+        book.inventory+=1
+        //span.textContent = book.inventory
+        patchBook(book, span) 
+    })
   
 
     btn.addEventListener('click', (e) => {
@@ -102,6 +109,18 @@ function postBook(url, book){
     .then(dbBook => buildOneBook(dbBook))
 }
 
+function patchBook(book, element){
+    fetch(`http://localhost:3000/inventory/${book.id}`,{
+        method: 'PATCH',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(book)
+    })
+    .then(res => res.json())
+    .then(bookRes => element.textContent = bookRes.inventory)
+}
+
 
 function deleteBook(id){
     fetch(`http://localhost:3000/inventory/${id}`,{
@@ -117,3 +136,7 @@ function initialize(){
 
 }
 initialize()
+
+//get the inventory count + 1 
+//change the dom
+//make patch 

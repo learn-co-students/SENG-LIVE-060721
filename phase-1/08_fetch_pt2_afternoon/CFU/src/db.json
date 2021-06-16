@@ -5,7 +5,7 @@
       "name": "Pangolin",
       "imageUrl": "https://i.pinimg.com/originals/bf/ff/93/bfff9395c6ae0d24534f030580924c7e.jpg",
       "description": "The Pangolin, otherwise known as the scaly anteater, is the only mammal in the world to be covered from head to toe in keratin scales (the same as human finger nails).",
-      "donations": 360,
+      "donations": 730,
       "funFacts": [
         {
           "keeper_id": 1,
@@ -74,6 +74,13 @@
       "donations": 50,
       "funFacts": [],
       "id": 6
+    },
+    {
+      "name": "Octopus",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Octopus2.jpg/220px-Octopus2.jpg",
+      "description": "Has 8 legs",
+      "donations": 160,
+      "id": 7
     }
   ]
 }
