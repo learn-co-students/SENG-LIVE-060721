@@ -1,0 +1,3 @@
+{
+  "/store/:id": "/store/:id?_embed=inventory"
+}

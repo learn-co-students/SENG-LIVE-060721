@@ -63,13 +63,7 @@ function buildOneBook(book){
     btn.textContent = 'Delete'
     btnInventory.textContent = 'Add Inventory'
 
-    btnInventory.addEventListener('click', (e) => {
-        //console.log(e.target.previousSibling.children[2].children)
-        span.textContent = book.inventory+1
-        console.log(book)
-        book.inventory = book.inventory+1
-        patchBook(book)
-    })
+  
 
     btn.addEventListener('click', (e) => {
        e.target.parentNode.remove()
@@ -108,16 +102,6 @@ function postBook(url, book){
     .then(dbBook => buildOneBook(dbBook))
 }
 
-function patchBook(book){
-    //console.log(id, data)
-    fetch(`http://localhost:3000/inventory/${book.id}`,{
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(book)
-    })
-}
 
 function deleteBook(id){
     fetch(`http://localhost:3000/inventory/${id}`,{
@@ -133,8 +117,3 @@ function initialize(){
 
 }
 initialize()
-//Create a btn that updates my inventory by 1 
-//Build the btn element  [x]
-//Add an event to the btn element
-//update the dom with the value
-//send a patch to update our server

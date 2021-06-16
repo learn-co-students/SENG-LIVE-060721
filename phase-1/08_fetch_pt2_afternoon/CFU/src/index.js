@@ -1,21 +1,5 @@
 //Fetch calls *****************
-function updateAnimals(e, data){
-  data.donations = data.donations+10
 
-  fetch(`http://localhost:3000/animals/${data.id}`,{
-    method:'PATCH',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body:JSON.stringify(data)
-  })
-  .then(res => res.json())
-  .then(data => {
-  // document.getElementById(data.id).querySelector('.donation-count').textContent = data.donations
-    console.log(e.target.parentNode.parentNode.children[1].children[1].children[0].textContent = data.donations)
-    console.log(data)
-  })
-}
 // Event Handlers *****************
 
 // Event Listeners ****************
@@ -30,9 +14,7 @@ function renderOneAnimal(animalObj) {
     btnDonate.textContent = 'Donate'
     btnDelete.textContent = 'Delete'
 
-    btnDonate.addEventListener('click',e => {
-      updateAnimals(e, animalObj)
-    })
+
 
     card.className = "card"
     card.id = animalObj.id
@@ -57,22 +39,14 @@ function renderOneAnimal(animalObj) {
  
  // Initial Render *************
  function initialize() {
-   fetch('http://localhost:3000/animals')
-   .then(resp => resp.json())
-   .then(data => {
-     console.log(data)
-     //the return will pass the data to the next function
-    return data
-    })
-   .then(data => data.forEach(renderOneAnimal))
-    document.querySelector('.card').remove()
+  
    
  }
   initialize()
  
-// [x] GET: Make a fetch for every animal and build an animal card using renderOneAnimal
+// GET: Make a fetch for every animal and build an animal card using renderOneAnimal
 
-// [x] PATCH: Add an event to the donate button that will increase the donation amount += 10, the donation amount should persis past page refresh and be updated pessimistically. 
+// PATCH: Add an event to the donate button that will increase the donation amount += 10, the donation amount should persis past page refresh and be updated pessimistically. 
 
 // DELETE: Add an event to the delete button that will delete the animal, the animal deletion should persist past page refresh.
 // Add a new animal to the list using the form.  
