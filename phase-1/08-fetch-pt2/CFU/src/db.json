@@ -1,0 +1,79 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Pangolin",
+      "imageUrl": "https://i.pinimg.com/originals/bf/ff/93/bfff9395c6ae0d24534f030580924c7e.jpg",
+      "description": "The Pangolin, otherwise known as the scaly anteater, is the only mammal in the world to be covered from head to toe in keratin scales (the same as human finger nails).",
+      "donations": 20,
+      "funFacts": [
+        {
+          "keeper_id": 1,
+          "fact": "Pangolin  means 'roller'"
+        },
+        {
+          "keeper_id": 3,
+          "fact": "There are Eight Species of Pangolin"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Wombat",
+      "imageUrl": "https://live.staticflickr.com/4158/33752020123_eab52e719d_b.jpg",
+      "description": "They have cube-shaped poop. Wombat poop is square. They mark their territories by defecating, and it's thought that the shape of their poop keeps it from rolling away.",
+      "donations": 0,
+      "funFacts": [
+        {
+          "keeper_id": 31,
+          "fact": "They poop in cubes"
+        },
+        {
+          "keeper_id": 101,
+          "fact": "Their butt is their main form of defence"
+        },
+        {
+          "keeper_id": 101,
+          "fact": "They are related to Koalas"
+        },
+        {
+          "keeper_id": 101,
+          "fact": "A Group of Wombats is known as a Wisdom"
+        }
+      ]
+    },
+    {
+      "name": "Sloth",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Choloepus_hoffmanni_%28Puerto_Viejo%2C_CR%29_crop.jpg/220px-Choloepus_hoffmanni_%28Puerto_Viejo%2C_CR%29_crop.jpg",
+      "description": "Is really cute!!!",
+      "donations": 0,
+      "id": 5,
+      "funFacts": [
+        {
+          "keeper_id": 44,
+          "fact": "Without sloths there would be no avocados"
+        },
+        {
+          "keeper_id": 7,
+          "fact": "Sloths are 3 times stronger than us"
+        },
+        {
+          "keeper_id": 59,
+          "fact": "They poop a third of their body weight in one go"
+        },
+        {
+          "keeper_id": 59,
+          "fact": "Sloths are blind in bright daylight"
+        }
+      ]
+    },
+    {
+      "name": "Penguin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Penguins_collage.png",
+      "description": "Can't fly",
+      "donations": 0,
+      "funFacts": [],
+      "id": 6
+    }
+  ]
+}
