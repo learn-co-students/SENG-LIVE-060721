@@ -1,6 +1,7 @@
 import React from 'react';
 import Painting from './Painting';
 
+// function PaintingsList(props) {
 const PaintingsList = (props) => {
 
   return (
@@ -9,7 +10,7 @@ const PaintingsList = (props) => {
       {
       props.paintings.map(painting => (
         <Painting
-          // key={painting.id}
+          key={painting.id}
           painting={painting}
         />
       ))
