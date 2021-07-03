@@ -48,6 +48,9 @@ function App() {
       // If comparison returns a value ≤ 0, leave a and b in the same order.
       // If comparison returns a value > than 0, sort b before a.
 
+      // votesCurrentPainting = 64
+      // votesNextPainting = 21 
+
       if (votesCurrentPainting < votesNextPainting) return -1;
       if (votesCurrentPainting > votesNextPainting) return 1;
       return 0;
