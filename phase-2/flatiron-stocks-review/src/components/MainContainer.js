@@ -9,12 +9,20 @@ function MainContainer() {
   const [ myStocks, setMyStocks ] = useState([])
 
   const [ sortBy, setSortBy ] = useState('')
+  const [ filterBy, setFilterBy ] = useState('')
+
+  // All stocks backup
+  // Used for filter
+  const [ allStocks, setAllStocks ] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3000/stocks')
     .then(res => res.json())
-    .then(data => setStocks(data))
-  },[])
+    .then(data => {
+      setStocks(data)
+      setAllStocks(data)
+    })
+  }, [])
 
   useEffect(() => {
     if(sortBy === 'Alphabetically'){
@@ -24,10 +32,19 @@ function MainContainer() {
       const sortedStocks = sortByPrice()
       setStocks(sortedStocks)
     }
-  }, [ sortBy ])
+  }, [sortBy])
+
+  useEffect(() => {
+    const filteredStocks = [...allStocks].filter(stock => stock.type === filterBy)
+    setStocks(filteredStocks)
+  }, [filterBy])
 
   const sortStocks = (e) => {
     setSortBy(e.target.value)
+  }
+
+  const filterStocks = (e) => {
+    setFilterBy(e.target.value)
   }
 
   const sortByName = () => {
@@ -52,7 +69,6 @@ function MainContainer() {
     });
   }
 
-
   const buyStock = (stock) => {
     if(!myStocks.includes(stock)){
       const updatedMyStocks = [...myStocks, stock]
@@ -69,7 +85,7 @@ function MainContainer() {
 
   return (
     <div>
-      <SearchBar sortStocks={sortStocks} sortBy={sortBy} />
+      <SearchBar sortStocks={sortStocks} sortBy={sortBy} filterStocks={filterStocks} />
 
       <div className="row">
         <div className="col-8">

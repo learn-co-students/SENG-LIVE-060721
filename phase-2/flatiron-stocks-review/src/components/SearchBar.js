@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchBar({ sortStocks, sortBy }) {
+function SearchBar({ sortStocks, sortBy, filterStocks }) {
 
   return (
     <div>
@@ -28,7 +28,7 @@ function SearchBar({ sortStocks, sortBy }) {
       <br />
       <label>
         <strong>Filter:</strong>
-        <select onChange={null}>
+        <select onChange={filterStocks}>
           <option value="Tech">Tech</option>
           <option value="Sportswear">Sportswear</option>
           <option value="Finance">Finance</option>
