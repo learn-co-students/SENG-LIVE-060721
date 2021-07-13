@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 
+// react-router-dom Imports
+import { Link } from "react-router-dom";
+
 function ProjectItem({ project }) {
+  
+  // Pull ID of Project from props and
+  // create appropriate URL using it
+  const src = `/projects/${project.id}`
+  
   const [claps, setClaps] = useState(0);
 
   const { image, name, about, phase } = project;
@@ -22,7 +30,9 @@ function ProjectItem({ project }) {
         <h4>{name}</h4>
         <p>{about}</p>
         <p>
-          <em>Add a link to the detail page here</em>
+          <Link to={src}>
+            Details
+          </Link>
         </p>
       </div>
 

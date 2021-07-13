@@ -6,14 +6,17 @@ function Clock() {
   useEffect(() => {
     console.log("Running side effect");
     // ✅ save the interval to a variable
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       console.log("Setting state");
       setTime(new Date());
     }, 1000);
 
+    console.log(intervalId);
+
     return function cleanup() {
       console.log("Running cleanup");
       // ✅ clear the interval so state is no longer updated
+      clearInterval(intervalId);
     };
   }, []);
 

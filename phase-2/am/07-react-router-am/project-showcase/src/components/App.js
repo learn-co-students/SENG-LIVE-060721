@@ -5,6 +5,9 @@ import ProjectForm from "./ProjectForm";
 import ProjectList from "./ProjectList";
 import ProjectDetail from "./ProjectDetail";
 
+// react-router-dom Imports
+import { Route, Switch } from "react-router-dom";
+
 function App() {
   const [projects, setProjects] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -35,10 +38,12 @@ function App() {
         setCurrentUser={setCurrentUser}
       />
       {/* wouldn't it be nice if these were separate pages? */}
-      <Home />
-      <ProjectForm onAddProject={handleAddProject} />
-      <ProjectList projects={projects} />
-      <ProjectDetail />
+      <Switch>
+        <Route path="/projects/new" component={() => <ProjectForm onAddProject={handleAddProject} />} />
+        <Route path="/projects/:id" component={() => <ProjectDetail />} />
+        <Route path="/projects" component={() => <ProjectList projects={projects} /> } />
+        <Route exact path="/" component={Home} />
+      </Switch>
     </div>
   );
 }

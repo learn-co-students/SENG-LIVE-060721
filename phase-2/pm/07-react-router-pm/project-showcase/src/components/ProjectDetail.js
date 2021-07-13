@@ -1,11 +1,27 @@
 import React, { useEffect, useState } from "react";
 
+// react-router-dom Imports
+import { useParams, useHistory } from "react-router-dom";
+
 function ProjectDetail() {
+
   const [claps, setClaps] = useState(0);
   const [project, setProject] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const id = 1;
+  // Pull ID of appropriate project from URL (:id)
+  // using useParams Hook
+  const id = useParams().id;
+
+  // Pull history object using useHistory Hook
+  let history = useHistory();
+
+  console.log(history);
+
+  // Create Callback Function to handle "Back" behavior
+  function handleBack() {
+    history.goBack();
+  }
 
   useEffect(() => {
     fetch(`http://localhost:3000/projects/${id}`)
@@ -46,6 +62,9 @@ function ProjectDetail() {
           <div className="extra">
             <span className="badge blue">Phase {phase}</span>
           </div>
+          <button onClick={handleBack}>
+            Back
+          </button>
         </div>
       </div>
     </section>

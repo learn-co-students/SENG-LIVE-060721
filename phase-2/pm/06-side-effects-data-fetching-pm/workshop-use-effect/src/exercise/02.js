@@ -1,17 +1,33 @@
 import { useState, useEffect } from "react";
 
+const initialText = () => (
+  localStorage.getItem("text") || ""
+  // some
+  // other
+  // behaviors
+);
+
+const initialCount = () => (
+  parseInt(localStorage.getItem("count")) || 0
+);
+
 function App() {
   // ✅ update the initial state for text to read a value using localStorage.getItem("text")
-  const [text, setText] = useState("");
-  const [count, setCount] = useState(0);
+  const [text, setText] = useState(initialText);
+  const [count, setCount] = useState(initialCount);
 
   useEffect(() => {
     // ✅ when the side effect runs, use localStorage.setItem("text", value) to save the text to localStorage
-    console.log("Running side effect");
-  });
+    localStorage.setItem("text", text);
+    localStorage.setItem("count", count);
+    
+    console.log("use effect triggered");
+  }, [text, count]);
   // ✅ use the dependencies array so that the side effect only runs if the text changes
 
   console.log("Rendering component");
+
+  const clearMemory = () => localStorage.clear();
 
   return (
     <div>
@@ -24,6 +40,7 @@ function App() {
         />
       </label>
       <button onClick={() => setCount(count => count + 1)}>{count}</button>
+      <button onClick={clearMemory}>Clear Memory</button>
     </div>
   );
 }

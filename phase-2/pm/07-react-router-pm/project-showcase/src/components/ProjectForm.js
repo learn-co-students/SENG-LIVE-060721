@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 
+// react-router-dom Imports
+import { useHistory } from "react-router-dom";
+
 function ProjectForm({ onAddProject }) {
   const [name, setName] = useState("");
   const [about, setAbout] = useState("");
   const [phase, setPhase] = useState(1);
   const [link, setLink] = useState("");
   const [image, setImage] = useState("");
+
+  // Pull history instance using useHistory Hook
+  let history = useHistory();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -28,6 +34,10 @@ function ProjectForm({ onAddProject }) {
       .then((r) => r.json())
       .then((newProject) => {
         onAddProject(newProject);
+
+        // Redirect User to "/projects" page upon
+        // successful creation of newProject
+        history.push("/projects");
       });
   }
 
