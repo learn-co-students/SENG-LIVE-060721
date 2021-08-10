@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-08-10 12:44:17
+  artist: MyString
+  all_ages: false
+
+two:
+  date: 2021-08-10 12:44:17
+  artist: MyString
+  all_ages: false
