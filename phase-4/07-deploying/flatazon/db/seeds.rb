@@ -1,0 +1,5 @@
+Item.create(item_name: 'father on a string', price:5.99)
+Item.create(item_name: 'fish plush', price:6.99)
+Item.create(item_name: 'cat bed', price:25.00)
+Item.create(item_name: 'cat food dish', price:8.99)
+Item.create(item_name: 'badanna collar', price:25.99)
